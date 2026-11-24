@@ -2,185 +2,259 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yeonsu's page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>전공 프로젝트 포트폴리오</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      color: #202333;
-      background: #f7f8fc;
+      background: #f5f6fa;
+      color: #202437;
       font-family: Arial, "Malgun Gothic", sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid #e5e7ef;
-    }
-
-    nav {
-      max-width: 1000px;
-      margin: auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: #202333;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #6257d9;
     }
 
     main {
       max-width: 1000px;
       margin: auto;
-      padding: 48px 24px;
+      padding: 32px 22px;
     }
 
-    .intro {
-      padding: 64px 0;
-    }
-
-    .intro h1 {
-      margin: 0;
-      font-size: clamp(36px, 7vw, 64px);
-      line-height: 1.15;
-    }
-
-    .intro p {
-      max-width: 600px;
-      color: #626779;
-      font-size: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 20px;
-      color: white;
-      background: #6257d9;
-      border-radius: 10px;
-      text-decoration: none;
+    header {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #dfe1e8;
+      color: #6158d8;
       font-weight: bold;
     }
 
-    section {
-      padding: 40px 0;
-      scroll-margin-top: 80px;
+    .intro {
+      padding: 58px 0 34px;
     }
 
-    h2 {
-      font-size: 28px;
+    .intro h1 {
+      margin: 0 0 12px;
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.1;
     }
 
-    .projects {
+    .intro p {
+      max-width: 620px;
+      color: #626779;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .algorithm-note {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #ecebff;
+      color: #5148c5;
+      font-size: 14px;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin: 26px 0 18px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: 1px solid #c8cad5;
+      border-radius: 22px;
+      background: white;
+      color: #303347;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: #6158d8;
+    }
+
+    button.selected {
+      border-color: #6158d8;
+      background: #6158d8;
+      color: white;
+    }
+
+    #projectList {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
     }
 
-    .card {
+    .project {
       padding: 22px;
+      border: 1px solid #e0e2ea;
+      border-radius: 14px;
       background: white;
-      border: 1px solid #e5e7ef;
-      border-radius: 14px;
     }
 
-    .card p {
+    .project h3 {
+      margin: 12px 0 8px;
+      font-size: 21px;
+    }
+
+    .project p {
+      min-height: 52px;
       color: #626779;
+      line-height: 1.6;
     }
 
-    .contact {
-      padding: 24px;
-      background: #eeedff;
-      border-radius: 14px;
+    .tag {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 20px;
+      background: #f0efff;
+      color: #5148c5;
+      font-size: 12px;
+    }
+
+    .date {
+      color: #858898;
+      font-size: 13px;
     }
 
     footer {
-      padding: 24px;
+      margin-top: 48px;
+      padding-top: 18px;
+      border-top: 1px solid #dfe1e8;
       color: #777b89;
-      text-align: center;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <strong>yeonsu's page</strong>
-      <div>
-        <a href="#about">yeonsu'page/a>
-        <a href="#projects">??</a>
-        <a href="#contact">kimyj4520813@snu.ac.kr</a>
-      </div>
-    </nav>
-  </header>
-
   <main>
+    <header>MY PROJECT PORTFOLIO</header>
+
     <section class="intro">
-      <h1>안녕하세요,<br>김연수입니다.</h1>
+      <h1>전공 프로젝트</h1>
       <p>
-        관심 있는 분야와 내가 만들거나 공부한 내용을 소개하는
-        개인 홈페이지입니다.
+        디지털 논리와 FPGA를 공부하며 진행한 프로젝트를 소개합니다.
+        아래 버튼으로 프로젝트를 최신순 또는 이름순으로 정렬할 수 있습니다.
       </p>
-      <a class="button" href="#projects">프로젝트 바로 보기</a>
+      <span class="algorithm-note">정렬 기능: 직접 구현한 Merge Sort</span>
     </section>
 
-    <section id="about">
-      <h2>소개</h2>
-      <p>
-        서울대학교 첨단융합학부 차세대지능형반도체 전공으로 재학중인 김연수입니다.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Project</h2>
-      <div class="projects">
-        <article class="card">
-          <h3>Project 1</h3>
-          <p></p>
-        </article>
-
-        <article class="card">
-          <h3>Project 2</h3>
-          <p></p>
-        </article>
-
-        <article class="card">
-          <h3>semiconductor</h3>
-          <p></p>
-        </article>
+    <section>
+      <div class="toolbar">
+        <h2>Projects</h2>
+        <div class="buttons">
+          <button id="newestButton" class="selected">Newest</button>
+          <button id="titleButton">Title A–Z</button>
+        </div>
       </div>
+
+      <div id="projectList"></div>
     </section>
 
-    <section id="contact">
-      <div class="contact">
-        <h2>연락처: 010-4253-4080</h2>
-        <p>이메일: kimyj4520813@snu.ac.kr</p>
-      </div>
-    </section>
+    <footer>© 2026 My Project Portfolio</footer>
   </main>
 
-  <footer>
-    © 2026 김연수
-  </footer>
+  <script>
+    // 프로젝트 정보를 실제 작업에 맞게 수정하세요.
+    const projects = [
+      {
+        title: "Traffic Light Controller",
+        date: "2026-11-19",
+        category: "Digital Logic",
+        description: "상태도와 상태 전이표를 바탕으로 교통 신호 제어기를 설계합니다."
+      },
+      {
+        title: "Nexys A7 Clock System",
+        date: "2026-11-23",
+        category: "FPGA",
+        description: "Nexys A7 보드에서 시계, 달력, 스톱워치 기능을 구현합니다."
+      },
+      {
+        title: "Personal Website",
+        date: "2026-11-24",
+        category: "Web",
+        description: "프로젝트 목록과 정렬 기능을 제공하는 개인 포트폴리오입니다."
+      }
+    ];
+
+    // 병합 정렬: 배열을 반으로 나누어 각각 정렬하고 다시 합칩니다.
+    function mergeSort(items, compare) {
+      if (items.length <= 1) {
+        return items;
+      }
+
+      const middle = Math.floor(items.length / 2);
+      const left = mergeSort(items.slice(0, middle), compare);
+      const right = mergeSort(items.slice(middle), compare);
+
+      return merge(left, right, compare);
+    }
+
+    function merge(left, right, compare) {
+      const result = [];
+      let leftIndex = 0;
+      let rightIndex = 0;
+
+      while (leftIndex < left.length && rightIndex < right.length) {
+        if (compare(left[leftIndex], right[rightIndex]) <= 0) {
+          result.push(left[leftIndex]);
+          leftIndex++;
+        } else {
+          result.push(right[rightIndex]);
+          rightIndex++;
+        }
+      }
+
+      return result
+        .concat(left.slice(leftIndex))
+        .concat(right.slice(rightIndex));
+    }
+
+    // 두 정렬 버튼이 이 함수를 호출하고, 이 함수가 Merge Sort를 실행합니다.
+    function showProjects(sortType) {
+      const compare = sortType === "title"
+        ? (a, b) => a.title.localeCompare(b.title)
+        : (a, b) => b.date.localeCompare(a.date);
+
+      const sortedProjects = mergeSort(projects, compare);
+      renderProjects(sortedProjects);
+
+      document.getElementById("newestButton")
+        .classList.toggle("selected", sortType === "newest");
+      document.getElementById("titleButton")
+        .classList.toggle("selected", sortType === "title");
+    }
+
+    function renderProjects(projectList) {
+      const container = document.getElementById("projectList");
+
+      container.innerHTML = projectList.map(project => `
+        <article class="project">
+          <span class="tag">${project.category}</span>
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <span class="date">${project.date}</span>
+        </article>
+      `).join("");
+    }
+
+    // 버튼 클릭 → showProjects() → mergeSort() 순서로 실행됩니다.
+    document.getElementById("newestButton")
+      .addEventListener("click", () => showProjects("newest"));
+
+    document.getElementById("titleButton")
+      .addEventListener("click", () => showProjects("title"));
+
+    // 처음에는 최신순으로 표시합니다.
+    showProjects("newest");
+  </script>
 </body>
 </html>
