@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yeonsu's page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: #202333;
+      background: #f7f8fc;
+      font-family: Arial, "Malgun Gothic", sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #e5e7ef;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #202333;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #6257d9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 48px 24px;
+    }
+
+    .intro {
+      padding: 64px 0;
+    }
+
+    .intro h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.15;
+    }
+
+    .intro p {
+      max-width: 600px;
+      color: #626779;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 20px;
+      color: white;
+      background: #6257d9;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 0;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 22px;
+      background: white;
+      border: 1px solid #e5e7ef;
+      border-radius: 14px;
+    }
+
+    .card p {
+      color: #626779;
+    }
+
+    .contact {
+      padding: 24px;
+      background: #eeedff;
+      border-radius: 14px;
+    }
+
+    footer {
+      padding: 24px;
+      color: #777b89;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <strong>yeonsu's page</strong>
+      <div>
+        <a href="#about">yeonsu'page/a>
+        <a href="#projects">??</a>
+        <a href="#contact">kimyj4520813@snu.ac.kr</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>안녕하세요,<br>김연수입니다.</h1>
+      <p>
+        관심 있는 분야와 내가 만들거나 공부한 내용을 소개하는
+        개인 홈페이지입니다.
+      </p>
+      <a class="button" href="#projects">프로젝트 바로 보기</a>
+    </section>
+
+    <section id="about">
+      <h2>소개</h2>
+      <p>
+        여기에 자기소개를 적어 주세요. 예를 들어 전공, 관심 분야,
+        배우고 있는 기술 등을 쓸 수 있습니다.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>프로젝트 1</h3>
+          <p>무엇을 만들었는지, 어떤 기술을 사용했는지 적어 주세요.</p>
+        </article>
+
+        <article class="card">
+          <h3>프로젝트 2</h3>
+          <p>프로젝트의 목적과 결과를 간단히 적어 주세요.</p>
+        </article>
+
+        <article class="card">
+          <h3>관심 분야</h3>
+          <p>앞으로 더 배우고 싶은 분야나 목표를 적어 주세요.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>연락처</h2>
+        <p>이메일: your.email@example.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 홍길동
+  </footer>
+</body>
+</html>
